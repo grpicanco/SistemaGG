@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Pessoa, Projeto, Grupo, Funcao, Trabalha, Participa
+from .models import Pessoa, Projeto, Grupo, Funcao #Trabalha, Participa
 
 class Pessoa_formulario(ModelForm):
     class Meta:
