@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import add_pessoa
+from .views import add_pessoa, add_grupo
 
 urlpatterns = [
- path('add_pessoa', add_pessoa, name='add_pessoa'),
+ path('add_pessoa/', add_pessoa, name='add_pessoa'),
+ path('add_grupo/', add_grupo, name='add_grupo'),
 ]
