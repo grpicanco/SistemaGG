@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+	{%block title_content%}
+		Sistema GG| Cadastro
+	{%endblock%}
+	{% block content %}
+		<div class="row">
+			<div class="col s2 m1"></div>
+			<div class="col s8 m10">
+				{%csrf_token%}
+				{{ form }}
+			</div>
+			<div class="col s2 m1"></div>
+		</div>
+    {% endblock %}
