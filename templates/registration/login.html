@@ -1,16 +1,6 @@
-{% extends 'base.html' %}
-
-{%block title%}Sistema GG Login {% endblock %}
-
-{%block main%}
-	<div class=" col s12 m2">
-		<i class="material-icons">add</i>
-	</div>
-	<div class=" col s12 m8">
-		<img src="statics/grup1.jpg" alt="">
-	</div>
-	<div class=" col s12 m2">
-
-	</div>
-
-{%endblock%}
+<h2> Login </h2>
+<form method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit"> Login </button>
+</form>

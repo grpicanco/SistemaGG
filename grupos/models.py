@@ -15,7 +15,7 @@ class Pessoa(models.Model):
 
 
     nome = models.CharField(max_length=45)
-    cpf = models.CharField(11)
+    cpf = models.CharField(max_length=11)
     escolaridade = models.PositiveSmallIntegerField(choices= ESCOLARIDADE_CHOICES)
     data_nascimento = models.DateField()
     profissao = models.CharField(max_length=50)
@@ -29,7 +29,7 @@ class Funcao(models.Model):
 
 
 class Projeto(models.Model):
-    nome = models.CharField(45)
+    nome = models.CharField(max_length=45)
     objetivo = models.TextField()
 
 
@@ -38,9 +38,9 @@ class Grupo(models.Model):
     nome = models.CharField(max_length=45)
     data_inicio = models.DateField(auto_now_add=True)
     data_fim = models.DateField()
-    cidade = models.CharField(20)
-    bairro = models.CharField(20)
-    logradouro = models.CharField(20)
+    cidade = models.CharField(max_length=20)
+    bairro = models.CharField(max_length=20)
+    logradouro = models.CharField(max_length=20)
     grupo_responsavel = models.ForeignKey('self', on_delete=models.CASCADE)
 
 
