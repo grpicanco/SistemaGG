@@ -1,8 +1,8 @@
 <nav class="indigo darken-3">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Sistema GG</a>
+      <a href="{% url 'home' %}'" class="brand-logo">Sistema GG</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="grupo/add_pessoa/">Cadastrar</a></li>
+        <li><a href="{% url 'add_pessoa'%}">Cadastrar</a></li>
         <li><a href="badges.html">Sobre</a></li>
         <li><a href="collapsible.html">Login</a></li>
       </ul>

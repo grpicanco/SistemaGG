@@ -3,6 +3,7 @@
 		Sistema GG| Cadastro
 	{%endblock%}
 	{% block main %}
+<!-- Titulo da pagina -->
 		<div class="row">
 			<div class="col s2 m1">
 			</div>
@@ -12,15 +13,49 @@
 			<div class="col s2 m1">
 			</div>
 		</div>
+<!-- form de cadstro-->
 		<div class="row">
 			<div class="col s2 m1"></div>
 			<div class="col s8 m10">
 				<form method="post" enctype="multipart/form-data">
-				{%csrf_token%}
-				{{ form }}
-				<button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar
-                    <i class="material-icons right">chevron_right</i>
-                </button>
+					{%csrf_token%}
+
+					<!-- form de Nome-->
+					<div class="input-field col s12">
+			          {{form.nome}}
+						<label>Nome</label>
+			        </div>
+
+					<!-- form de CPF-->
+					<div class="input-field col s12">
+			          {{ form.cpf }}
+						<label>CPF</label>
+			        </div>
+
+					<!-- form de Data-->
+					<div class="input-field col s12">
+						<input type="date" id="data"
+						placeholder="Date">
+			        </div>
+
+					<!-- form de Profissão-->
+					<div class="input-field col s12">
+						{{ form.profissao }}
+			          <label>Profissão</label>
+			        </div>
+
+					<!-- form de Escolaridade-->
+					<div class="input-field col s12">
+				        <select>
+				            <option value="1" disabled selected>Ensino Fundamental</option>
+				            <option value="2" disabled selected>Ensino Médio</option>
+				            <option value="3" disabled selected>Ensino Superior</option>
+				        </select>
+				        <label>Escolaridade</label>
+				    </div>
+					<button class="btn waves-effect waves-light" type="submit" name="action" style="padding-left= 15px; padding-right= 15px margin-bottom=5px">Cadastrar
+	                    <i class="material-icons right">chevron_right</i>
+	                </button>
 				</form>
 				<a class="waves-effect waves-light btn" href="{% url 'home' %}"><i class="material-icons left">chevron_left</i>Voltar</a>
 			</div>
